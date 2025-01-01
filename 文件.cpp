@@ -25,7 +25,6 @@ int main() {
 
     int arry[26];
 
-    int total = 1;
     int control = 0;
     int ore = 0;
     string blocks;
@@ -143,11 +142,10 @@ int main() {
             control = 27;
             break;
         }
-        total++;
         fout << "spreadplayers 8 8 1 16 under -51 false @e[type=minecraft:armor_stand]\n";
         fout << "execute at @e[type=minecraft:armor_stand] run setblock ~ ~ ~ " << blocks << endl;
         fout << endl;
-        std::cout << "已完成第" << total << "次书写\t" << "此次随机变量为" << control << "\t" << "方块为" << blocks << endl;
+        std::cout << "已完成次书写\t" << "此次随机变量为" << control << "\t" << "方块为" << blocks << endl;
     }
 
     fout.close();
